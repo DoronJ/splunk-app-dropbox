@@ -1,10 +1,10 @@
 <form>
   <label>Team Admin Actions</label>
-  <fieldset submitButton="false">
+  <fieldset submitButton="false" autoRun="true">
     <input type="time" token="range" searchWhenChanged="true">
       <label/>
       <default>
-        <earliestTime>-7d@d</earliestTime>
+        <earliestTime>-7d@h</earliestTime>
       </default>
     </input>
   </fieldset>
