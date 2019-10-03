@@ -1,0 +1,14 @@
+[props/dropbox]
+owner = doron
+version = 7.3.1.1
+modtime = 1570089653.124998000
+
+[props/source%3A%3A...splunk-app-dropbox%2A.log%2A]
+owner = doron
+version = 7.3.1.1
+modtime = 1570089653.455664000
+
+[props/source%3A%3A...splunk_app_dropbox%2A.log%2A]
+owner = doron
+version = 7.3.1.1
+modtime = 1570089653.765312000
