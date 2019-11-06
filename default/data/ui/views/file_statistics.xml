@@ -81,7 +81,7 @@
     <panel>
       <table>
         <title>User Activity Trend</title>
-        <searchString>eventtype=dropbox (event_type..tag = FILE_ADD OR event_type..tag = FILE_DELETE) | chart count sparkline(count,1h) as trend by name, event_type.description | addtotals | sort - Total | `format_field_names`</searchString>
+        <searchString>sourcetype=dropbox (event_type..tag = FILE_ADD OR event_type..tag = FILE_DELETE) | chart count sparkline(count,1h) as trend by name, event_type.description | addtotals | sort - Total | `format_field_names`</searchString>
         <earliestTime>$range.earliest$</earliestTime>
         <latestTime>$range.latest$</latestTime>
         <option name="charting.axisLabelsX.majorLabelStyle.overflowMode">ellipsisNone</option>

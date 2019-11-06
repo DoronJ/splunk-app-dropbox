@@ -47,7 +47,7 @@ class ModInputdropbox(modinput_wrapper.base_modinput.BaseModInput):
         For other input types, arguments should be get from input_module. Defining new input types could be easier.
         """
         scheme.add_argument(smi.Argument("access_token", title="Access Token",
-                                         description="Get token at https://www.dropbox.com/1/oauth2/authorize?client_id=uffreahyhjd8j11&response_type=token&redirect_uri=https://www.dropbox.com/1/oauth2/display_token",
+                                         description="Get token https://www.dropbox.com/1/oauth2/authorize?client_id=uffreahyhjd8j11&response_type=token&redirect_uri=https://www.dropbox.com/1/oauth2/display_token",
                                          required_on_create=True,
                                          required_on_edit=False))
         scheme.add_argument(smi.Argument("start_time", title="Start Time",
@@ -55,7 +55,7 @@ class ModInputdropbox(modinput_wrapper.base_modinput.BaseModInput):
                                          required_on_create=False,
                                          required_on_edit=False))
         scheme.add_argument(smi.Argument("categroy", title="Categroy",
-                                         description="Filter the returned events to a single category.See https://www.dropbox.com/developers/documentation/http/teams#team_log-get_events, for available categories.",
+                                         description="Filter the returned events to a single category. See https://www.dropbox.com/developers/documentation/http/teams#team_log-get_events for available categories.",
                                          required_on_create=False,
                                          required_on_edit=False))
         return scheme

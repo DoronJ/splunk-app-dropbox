@@ -13,7 +13,7 @@
       <single>
         <title>Active Team Members</title>
         <search>
-          <query> eventtype=dropbox_team_member | stats count dc(email) as unique_team_members | table unique_team_members </query>
+          <query> sourcetype=dropbox is_team_member=1 | stats count dc(email) as unique_team_members | table unique_team_members </query>
           <earliest>$range.earliest$</earliest>
           <latest>$range.latest$</latest>
         </search>
@@ -24,7 +24,7 @@
       <single>
         <title>App Links</title>
         <search>
-          <query> eventtype="dropbox" AND (event_type..tag=app_link_user OR event_type..tag=app_link_team) | stats count dc(details.app_info.display_name) as app_linked | table app_linked </query>
+          <query> sourcetype="dropbox" AND (event_type..tag=app_link_user OR event_type..tag=app_link_team) | stats count dc(details.app_info.display_name) as app_linked | table app_linked </query>
           <earliest>$range.earliest$</earliest>
           <latest>$range.latest$</latest>
         </search>
@@ -116,7 +116,7 @@
     <panel>
       <table>
         <title>Members Added</title>
-        <searchString>eventtype="dropbox" event_type..tag = MEMBER_CHANGE_STATUS AND details.new_value..tag = active | table name, email, _time | sort - _time | `format_field_names` </searchString>
+        <searchString>sourcetype="dropbox" event_type..tag = MEMBER_CHANGE_STATUS AND details.new_value..tag = active | table name, email, _time | sort - _time | `format_field_names` </searchString>
         <earliestTime>$range.earliest$</earliestTime>
         <latestTime>$range.latest$</latestTime>
         <option name="wrap">true</option>
